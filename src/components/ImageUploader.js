@@ -84,7 +84,7 @@ function ImageUploader({ onResultChange }) {
           onChange={(e) => setModel(e.target.value)}
         >
           <MenuItem value="padim">PaDiM</MenuItem>
-          <MenuItem value="efficientad">EfficientAD</MenuItem>
+          {/* <MenuItem value="efficientad">EfficientAD</MenuItem> */}
           <MenuItem value="uninet">UniNet</MenuItem>
         </Select>
       </FormControl>
@@ -102,7 +102,7 @@ function ImageUploader({ onResultChange }) {
             Result: {result.result === "defect" ? "Defect Detected" : "Good"}
           </Typography>
           <Typography variant="body1">
-            Score: {(result.score * 100).toFixed(2)}%
+            Score: {result.score.toFixed(2)}
           </Typography>
         </Box>
       )}
